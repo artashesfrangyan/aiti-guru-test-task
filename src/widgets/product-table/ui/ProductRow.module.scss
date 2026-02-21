@@ -1,0 +1,214 @@
+@use '@/app/styles/variables.scss' as *;
+
+.row {
+  height: 71px;
+  transition: background-color 0.1s ease;
+  border-left: 3px solid transparent;
+
+  &:hover {
+    background: #f9f9f9;
+  }
+
+  &.selected {
+    border-left: 3px solid #3b538e;
+  }
+}
+
+.cell {
+  display: table-cell;
+  vertical-align: middle;
+  color: #222222;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+
+  &[data-column="title"] {
+    padding-left: 15px;
+  }
+
+  &[data-column="select"] {
+    padding-left: 15px;
+  }
+
+  &[data-column="brand"] {
+    // padding-left: 134px;
+    padding-left: 71px;
+  }
+
+  &[data-column="price"] {
+    // padding-right: 134px;
+    padding-right: 48px;
+  }
+}
+
+.productInfo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.thumbnail {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid #ececeb;
+}
+
+.productName {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.title {
+  font-weight: 700;
+  color: #222222;
+  font-size: 16px;
+  line-height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.category {
+  font-size: 14px;
+  line-height: 100%;
+  color: #b2b3b9;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.vendor {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.sku {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.rating {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.lowRating {
+  color: #f01010;
+}
+
+.price {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  color: #222222;
+  font-weight: 400;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  width: 133px;
+  margin-left: 16px;
+}
+
+.plusButton {
+  width: 52px;
+  height: 27px;
+  padding: 0;
+  border: none;
+  border-radius: 23px;
+  background: $color-primary;
+  color: $color-text-white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-normal ease;
+
+  &:hover {
+    background: $color-primary-hover;
+  }
+}
+
+.plusIconSmall {
+  width: 24px;
+  height: 24px;
+}
+
+.menuWrapper {
+  position: relative;
+}
+
+.menuButton {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dots {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  min-width: 180px;
+  background: #ffffff;
+  border: 1px solid #ececeb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.menuItem {
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  color: #222222;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: #f9f9f9;
+  }
+}
