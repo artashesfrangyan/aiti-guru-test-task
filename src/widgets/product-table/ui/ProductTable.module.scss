@@ -1,0 +1,252 @@
+.wrapper {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 30px 37px;
+  flex: 1;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  box-sizing: border-box;
+  min-height: 0;
+  box-shadow: none;
+  border: none;
+  overflow: hidden;
+}
+
+.paginationInfo span.count {
+  color: #333333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-shrink: 0;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    letter-spacing: 0;
+    line-height: 14px;
+  }
+}
+
+.headerControls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.refreshButton {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px;
+  padding: 0 !important;
+  border-radius: 8px !important;
+  background: #ffffff !important;
+  border: 1px solid #ececeb !important;
+  color: #222222 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  box-sizing: border-box;
+
+  &:hover:not(:disabled) {
+    background: #f9f9f9 !important;
+    border-color: #d8d8d8 !important;
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+
+  svg {
+    transform: scaleY(-1);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+
+    svg {
+      animation: spin 1s linear infinite;
+    }
+  }
+
+  svg {
+    transition: transform 0.2s ease;
+  }
+}
+
+button.addButton {
+  font-size: 14px;
+  line-height: 20px;
+  column-gap: 15px;
+  font-family: 'Cairo', sans-serif;
+}
+
+.plusIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.tableWrapper {
+  min-height: 0;
+  overflow: auto;
+  border: none;
+  border-radius: 0;
+}
+
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  table-layout: fixed;
+}
+
+.thead {
+  display: table-header-group;
+}
+
+.tbody {
+  display: table-row-group;
+
+  td, th {
+    text-align: center;
+
+    &[data-column="title"] {
+      text-align: left;
+    }
+  }
+}
+
+.row {
+  display: table-row;
+  border-left: 3px solid transparent;  
+
+  &:hover {
+    background: #f9f9f9;
+  }
+
+  &.selected {
+    border-left: 3px solid #3b538e;
+  }
+}
+
+.thead .row {
+  height: 73px;
+  background: #ffffff;
+
+  &:hover {
+    background: #ffffff;
+  }
+}
+
+.tbody .row {
+  height: 71px;
+  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;
+}
+
+.cell {
+  display: table-cell;
+  vertical-align: middle;
+  color: #222222;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  text-align: center;
+}
+
+.cell[data-column="title"] {
+  width: 273px;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.cell[data-column="brand"] {
+  width: 18%;
+  // padding-left: 134px;
+  padding-left: 71px;
+}
+
+.cell[data-column="sku"] {
+  width: 14.8%;
+}
+
+.cell[data-column="rating"] {
+  width: 14.8%;
+}
+
+.cell[data-column="price"] {
+  width: 18%;
+  // padding-right: 134px;
+  padding-right: 48px;
+}
+
+.cell[data-column="actions"] {
+  width: 14.35%;
+}
+
+.thead .cell {
+  font-weight: 700;
+  color: #b2b3b9;
+  white-space: nowrap;
+  font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+
+  &[data-column="select"] {
+    padding: 0 20px 0 15px;
+    width: 22px;
+  }
+}
+
+.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s;
+  font-weight: 700;
+  color: #b2b3b9;
+  font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 16px;
+
+  &:hover {
+    color: #242edb;
+  }
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.paginationInfo {
+  font-size: 18px;
+  color: #969B9F;
+  font-weight: 400;
+  line-height: 21px;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
