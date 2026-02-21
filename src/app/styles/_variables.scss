@@ -1,0 +1,65 @@
+// Primary Colors
+$color-primary: #242edb;
+$color-primary-hover: #1e2494;
+$color-primary-active: #1a2172;
+$color-primary-light: rgba(36, 46, 219, 0.1);
+$color-primary-shadow: rgba(36, 46, 219, 0.3);
+
+// Text Colors
+$color-text-primary: #222222;
+$color-text-secondary: #666666;
+$color-text-muted: #b2b3b9;
+$color-text-disabled: #999999;
+$color-text-white: #ffffff;
+
+// Background Colors
+$color-bg-white: #ffffff;
+$color-bg-light: #f8f9fa;
+$color-bg-hover: #f9f9f9;
+$color-bg-disabled: #f0f0f0;
+$color-bg-input: #f3f3f3;
+
+// Border Colors
+$color-border: #ececeb;
+$color-border-dark: #e2e2e3;
+$color-border-hover: #d0d0d0;
+$color-border-active: #b0b0b0;
+
+// Danger Colors
+$color-danger-bg: #fde8e8;
+$color-danger-bg-hover: #fdd1d1;
+$color-danger-bg-active: #fcbaba;
+$color-danger-text: #c41f0a;
+
+// Success Colors
+$color-success: #0fb981;
+$color-success-hover: #0d9568;
+$color-success-active: #0a7a54;
+
+// Button Sizes
+$button-height-xs: 28px;
+$button-height-sm: 36px;
+$button-height-md: 42px;
+$button-height-lg: 48px;
+
+$button-padding-xs: 4px 10px;
+$button-padding-sm: 9px 16px;
+$button-padding-md: 10px 20px;
+$button-padding-lg: 12px 24px;
+
+$button-font-xs: 12px;
+$button-font-sm: 14px;
+$button-font-md: 16px;
+$button-font-lg: 16px;
+
+$button-radius: 8px;
+$button-radius-lg: 12px;
+
+// Transition
+$transition-fast: 0.12s;
+$transition-normal: 0.2s;
+
+// Font Family
+$font-family-inter: 'Inter', sans-serif;
+$font-family-cairo: 'Cairo', sans-serif;
+$font-family-roboto: 'Roboto', sans-serif;
