@@ -1,0 +1,81 @@
+.pagination {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pageBtn {
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ececeb;
+  background: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  transition: all 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+
+  &[aria-label="Предыдущая страница"] {
+    border: none;
+    margin-right: 8px;
+    min-width: 20px;
+    width: 20px;
+  }
+
+  &[aria-label="Следующая страница"] {
+    border: none;
+    margin-left: 8px;
+    min-width: 20px;
+    width: 20px;
+  }
+
+  &:hover:not(:disabled) {
+    border-color: #d8d8d8;
+    background: #f8f8f8;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.active {
+    background: #797fea;
+    color: white;
+    border: none;
+
+    &:hover {
+      background: #5a6fd8;
+    }
+  }
+}
+
+.navBtn {
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #333333;
+
+  &:hover:not(:disabled) {
+    color: #242edb;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
